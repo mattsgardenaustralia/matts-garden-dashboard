@@ -1,0 +1,51 @@
+/* Custom styles for TikTok Growth Intelligence Dashboard */
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: oklch(var(--bc) / 0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: oklch(var(--bc) / 0.3); }
+
+/* Glow effects for cards */
+.glow-green { box-shadow: 0 0 20px oklch(var(--su) / 0.15); }
+.glow-red { box-shadow: 0 0 20px oklch(var(--er) / 0.15); }
+.glow-primary { box-shadow: 0 0 20px oklch(var(--p) / 0.12); }
+
+/* Pulse animation for alerts */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+/* Chart container */
+.chart-container { position: relative; width: 100%; }
+.chart-container canvas { width: 100% !important; }
+
+/* Sidebar active indicator */
+.nav-active { border-left: 3px solid oklch(var(--p)); }
+
+/* Metric cards hover */
+.metric-card { transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.metric-card:hover { transform: translateY(-2px); }
+
+/* Score ring */
+.score-ring { position: relative; display: inline-flex; align-items: center; justify-content: center; }
+
+/* Table row hover */
+.table-hover tr:hover td { background: oklch(var(--b3) / 0.5); }
+
+/* Trend bar animation */
+@keyframes grow-bar {
+  from { width: 0%; }
+  to { width: var(--bar-width); }
+}
+.trend-bar { animation: grow-bar 0.8s ease-out forwards; }
+
+/* Badge glow */
+.badge-glow { box-shadow: 0 0 8px currentColor; }
+
+/* Hide number input spinners */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] { -moz-appearance: textfield; }
